@@ -1,0 +1,85 @@
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"] {
+    appearance: none;
+    width: 100%;
+    height: 70px;
+    background-color: $cc-white;
+    border: 1px solid $cc-off-white2;
+    border-radius: 35px;
+    box-shadow: 0 0 16px transparentize($cc-black1, 0.94);
+    @include font-size(20);
+    color: transparentize($cc-black1, 0.59);
+    padding: 10px 30px 10px 60px;
+    position: relative;
+    @include epsilonSize {
+        @include font-size(19);
+        height: 56px;
+        border-radius: 28px;
+        padding: 10px 28px 10px 55px;
+    }
+    @include deltaSize {
+        @include font-size(18);
+        height: 50px;
+        border-radius: 25px;
+        padding: 10px 26px 10px 50px;
+    }
+    @include gammaSize {
+        @include font-size(17);
+        height: 48px;
+        border-radius: 24px;
+        padding: 10px 24px 10px 48px;
+    }
+    @include betaSize {
+        @include font-size(16);
+        height: 46px;
+        border-radius: 23px;
+        padding: 10px 22px 10px 46px;
+    }
+}
+
+textarea {
+    appearance: none;
+    width: 100%;
+    min-height: 200px;
+    background-color: $cc-white;
+    border: 1px solid $cc-off-white2;
+    border-radius: 35px;
+    box-shadow: 0 0 16px transparentize($cc-black1, 0.94);
+    @include font-size(20);
+    color: transparentize($cc-black1, 0.59);
+    padding: 10px 30px 10px 60px;
+    @include epsilonSize {
+        @include font-size(19);
+        border-radius: 28px;
+        padding: 10px 28px 10px 55px;
+    }
+    @include deltaSize {
+        @include font-size(18);
+        border-radius: 25px;
+        padding: 10px 26px 10px 50px;
+    }
+    @include gammaSize {
+        @include font-size(17);
+        border-radius: 24px;
+        padding: 10px 24px 10px 48px;
+    }
+    @include betaSize {
+        @include font-size(16);
+        border-radius: 23px;
+        padding: 10px 22px 10px 46px;
+    }
+}
+
+::-webkit-input-placeholder {
+    color: transparentize($cc-black1, 0.59);
+}
+
+ :-ms-input-placeholder {
+    color: transparentize($cc-black1, 0.59);
+}
+
+ ::placeholder {
+    color: transparentize($cc-black1, 0.59);
+}

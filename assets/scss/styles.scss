@@ -1,0 +1,51 @@
+@import "variables";
+@import "classes";
+@import "mixins";
+@import "forms";
+@import "typography";
+@import "header";
+@import "footer";
+@import "global";
+@import "sections";
+@import "slick";
+@import "slick-theme";
+@import "overrides";
+html {
+    font-size: 62.5%;
+    height: 100%;
+    * {
+        font-family: $cc-font;
+        outline: none;
+    }
+    @include zetaSize {
+        font-size: 60.5%;
+    }
+    @include epsilonSize {
+        font-size: 58.5%;
+    }
+    @include deltaSize {
+        font-size: 56.5%;
+    }
+    @include gammaSize {
+        font-size: 54.5%;
+    }
+    @include betaSize {
+        font-size: 52.5%;
+    }
+}
+
+body {
+    width: 100%;
+    @extend .margin-pad-none;
+    position: relative;
+    min-height: 100%;
+}
+
+// .logo {
+//     width: 200px;
+//     height: 100px;
+//     background-image: url("#{$cc-images}main-logo.png");
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//     background-position: center center;
+// }

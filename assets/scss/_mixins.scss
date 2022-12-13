@@ -1,0 +1,125 @@
+/*
+ * Copyright (C) 2017 Sinorbis Technology or its affiliates
+ *
+ * Information contained within this file cannot be copied,
+ * distributed and/or practised without the written consent of
+ * Sinorbis Technology or its affiliates.
+*/
+
+//CSS3 PREFIX
+@mixin css3-prefix($property, $value) {
+    -webkit-#{$property}: #{$value};
+    -khtml-#{$property}: #{$value};
+    -moz-#{$property}: #{$value};
+    -ms-#{$property}: #{$value};
+    -o-#{$property}: #{$value};
+    #{$property}: #{$value};
+  }
+  
+  //BORDER RADIUS
+  @mixin border-radius($radius) {
+    @include css3-prefix('border-radius', $radius);
+  }
+  
+  //TEXT TRUNCATE
+  @mixin text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  
+  //POSITION ABSOLUTE
+  @mixin abs-pos ($top: auto, $right: auto, $bottom: auto, $left: auto) {
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    position: absolute;
+  }
+  
+  //FONT SIZES FOR BOTH PX'S AND REM'S
+  @mixin font-size($sizeValue){
+    font-size: $sizeValue + px; //fallback for old browsers
+    font-size: ($sizeValue/10) + rem;
+  }
+  
+  
+  //BACKGROUND OPACITY WITH COLOR
+  @mixin bg-rgba($r, $g, $b, $opacity, $color) {
+    background-color: transparent;
+    background-color: rgba($r, $g, $b, $opacity);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$color}',endColorstr='#{$color}');
+    zoom:   1;
+  }
+  
+  //MEDIA QURIES
+  
+  //320px
+  @mixin alphaSize {
+    @media all and (max-width: $alpha){
+      @content
+    }
+  }
+  
+  //380px
+  @mixin betaSize {
+    @media all and (max-width: $beta){
+      @content
+    }
+  }
+  
+  //480px
+  @mixin gammaSize {
+    @media all and (max-width: $gamma){
+      @content
+    }
+  }
+  
+  //620px
+  @mixin deltaSize {
+    @media all and (max-width: $delta){
+      @content
+    }
+  }
+  
+  //767px
+  @mixin epsilonSize {
+    @media all and (max-width: $epsilon){
+      @content
+    }
+  }
+  
+  //991px
+  @mixin zetaSize {
+    @media all and (max-width: $zeta){
+      @content
+    }
+  }
+  
+  //1200px
+  @mixin etaSize {
+    @media all and (max-width: $eta){
+      @content
+    }
+  }
+  
+  //1368px
+  @mixin thetaSize {
+    @media all and (max-width: $theta){
+      @content
+    }
+  }
+  
+  @mixin iotaSize {
+    @media all and (max-width: $iota){
+      @content
+    }
+  }
+  
+  @mixin kappaSize {
+    @media all and (max-width: $kappa){
+      @content
+    }
+  }
+  

@@ -1,0 +1,153 @@
+::selection {
+    color: $cc-blue1;
+    background: $cc-yellow;
+}
+
+.cc-btn {
+    min-height: 62px;
+    min-width: 228px;
+    @include font-size(18);
+    font-weight: $cc-fBold;
+    text-transform: uppercase;
+    border-radius: 41px;
+    line-height: 1;
+    @include etaSize {
+        min-height: 60px;
+        min-width: 200px;
+        @include font-size(17);
+    }
+    @include zetaSize {
+        min-height: 55px;
+        min-width: 180px;
+        @include font-size(16);
+    }
+    @include epsilonSize {
+        min-height: 50px;
+        min-width: 160px;
+        @include font-size(15);
+    }
+    @include deltaSize {
+        min-height: 45px;
+        min-width: 140px;
+        @include font-size(14);
+    }
+    @include gammaSize {
+        min-height: 40px;
+        min-width: 120px;
+        @include font-size(13);
+    }
+    @include betaSize {
+        min-height: 35px;
+        min-width: 100px;
+    }
+}
+
+.btn-primary {
+    color: #fff;
+    background: $cc-yellow;
+    background: linear-gradient(60deg, $cc-brown 0%, $cc-yellow 100%);
+    border: 1px solid transparentize($cc-yellow, 0.3);
+    box-shadow: 0 0 10px $cc-yellow;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    &:hover,
+    &:focus {
+        border: 1px solid transparentize($cc-yellow, 0.4);
+        box-shadow: 0 0 13px $cc-yellow;
+        transform: scale(1.02);
+        outline: none;
+    }
+}
+
+footer {
+    position: relative;
+    height: auto;
+    background-color: $cc-black2;
+    section {
+        padding: 20px 0;
+        .cc-section__inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include gammaSize {
+                flex-direction: column;
+            }
+            .cc-footer-logo {
+                width: 142px;
+                @include zetaSize {
+                    width: 135px;
+                }
+                @include epsilonSize {
+                    width: 130px;
+                }
+                @include deltaSize {
+                    width: 125px;
+                }
+                @include gammaSize {
+                    width: 120px;
+                    margin-bottom: 15px;
+                }
+                @include betaSize {
+                    width: 115px;
+                }
+            }
+            .cc-copyright {
+                @include font-size(14);
+                font-weight: $cc-fRegular;
+                color: $cc-grey2;
+                letter-spacing: unset;
+                @include zetaSize {
+                    @include font-size(13);
+                }
+                @include epsilonSize {
+                    @include font-size(12);
+                }
+                @include deltaSize {
+                    @include font-size(11);
+                }
+                @include gammaSize {
+                    @include font-size(10);
+                    margin-bottom: 15px;
+                }
+            }
+            .cc-socials {
+                .cc-social {
+                    width: 32px;
+                    height: 32px;
+                    margin-left: 15px;
+                    -webkit-transition: all .2s ease-in-out;
+                    -moz-transition: all .2s ease-in-out;
+                    transition: all .2s ease-in-out;
+                    @include zetaSize {
+                        width: 30px;
+                        height: 30px;
+                    }
+                    @include epsilonSize {
+                        width: 28px;
+                        height: 28px;
+                    }
+                    @include deltaSize {
+                        width: 26px;
+                        height: 26px;
+                    }
+                    @include gammaSize {
+                        width: 24px;
+                        height: 24px;
+                        margin: 0 7px;
+                    }
+                    @include betaSize {
+                        width: 22px;
+                        height: 22px;
+                    }
+                }
+                a:hover,
+                a:focus {
+                    .cc-social {
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+    }
+}

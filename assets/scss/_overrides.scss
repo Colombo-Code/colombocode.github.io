@@ -1,0 +1,255 @@
+.form-control {
+    height: 42px;
+    border: 1px solid transparentize($cc-black1, 0.8);
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
+    @include font-size(16);
+    font-weight: $cc-fLight;
+    padding: 0 15px;
+    &:hover,
+    &:focus,
+    &:active {
+        outline: none;
+        box-shadow: none;
+        border: 1px solid transparentize($cc-yellow, 0.8);
+    }
+}
+
+[type="checkbox"] {
+    appearance: none;
+}
+
+[type="checkbox"]+label {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    padding-left: 5px;
+}
+
+[type="checkbox"]+label::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: -2px;
+    top: -1px;
+    margin-left: -20px;
+    border: 1px solid $cc-yellow;
+    background-color: #fff;
+    -webkit-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+    -o-transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+    transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+[type="checkbox"]+label::after {
+    display: inline-block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 0;
+    top: 1px;
+    margin-left: -21px;
+    padding-left: 3px;
+    padding-top: 1px;
+    @include font-size(11);
+    color: $cc-white;
+}
+
+[type="checkbox"]:checked+label::before {
+    border: 1px solid $cc-yellow;
+    background-color: $cc-yellow;
+}
+
+input[type="checkbox"]:checked+label::after {
+    font-family: "FontAwesome";
+    content: "\f00c";
+}
+
+.slick-prev {
+    left: 72px;
+    @include thetaSize {
+        left: 20px;
+    }
+    @include epsilonSize {
+        width: 52px;
+        height: 52px;
+    }
+    @include deltaSize {
+        width: 45px;
+        height: 45px;
+        left: 10px;
+    }
+    @include gammaSize {
+        width: 40px;
+        height: 40px;
+    }
+    @include betaSize {
+        width: 35px;
+        height: 35px;
+    }
+    [dir="rtl"] & {
+        left: auto;
+        right: 72px;
+        @include thetaSize {
+            right: 20px;
+        }
+        @include deltaSize {
+            right: 10px;
+        }
+    }
+    &:before {
+        content: '\e765';
+        font-family: "fontello";
+        font-style: normal;
+        font-weight: normal;
+        speak: never;
+        display: inline-block;
+        text-decoration: inherit;
+        text-align: center;
+        /* opacity: .8; */
+        font-variant: normal;
+        text-transform: none;
+        /* font-size: 120%; */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        width: 62px;
+        height: 62px;
+        text-align: center;
+        line-height: 62px;
+        background-color: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(217, 208, 193, 0.1);
+        border-radius: 100%;
+        @include font-size(26);
+        color: rgba(255, 255, 255, 0.75);
+        @include epsilonSize {
+            width: 52px;
+            height: 52px;
+            line-height: 52px;
+        }
+        @include deltaSize {
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+        }
+        @include gammaSize {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+        }
+        @include betaSize {
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+        }
+        [dir="rtl"] & {
+            content: '\e766';
+        }
+    }
+}
+
+.slick-next {
+    right: 72px;
+    @include thetaSize {
+        right: 20px;
+    }
+    @include epsilonSize {
+        width: 52px;
+        height: 52px;
+    }
+    @include deltaSize {
+        width: 45px;
+        height: 45px;
+        right: 10px;
+    }
+    @include gammaSize {
+        width: 40px;
+        height: 40px;
+    }
+    @include betaSize {
+        width: 35px;
+        height: 35px;
+    }
+    [dir="rtl"] & {
+        left: 72px;
+        right: auto;
+        @include thetaSize {
+            left: 20px;
+        }
+        @include deltaSize {
+            left: 10px;
+        }
+    }
+    &:before {
+        content: '\e766';
+        font-family: "fontello";
+        font-style: normal;
+        font-weight: normal;
+        speak: never;
+        display: inline-block;
+        text-decoration: inherit;
+        text-align: center;
+        /* opacity: .8; */
+        font-variant: normal;
+        text-transform: none;
+        /* font-size: 120%; */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        width: 62px;
+        height: 62px;
+        text-align: center;
+        line-height: 62px;
+        background-color: rgba(255, 255, 255, 0.12);
+        border: 1px solid rgba(217, 208, 193, 0.1);
+        border-radius: 100%;
+        @include font-size(26);
+        color: rgba(255, 255, 255, 0.75);
+        @include epsilonSize {
+            width: 52px;
+            height: 52px;
+            line-height: 52px;
+        }
+        @include deltaSize {
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+        }
+        @include gammaSize {
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+        }
+        @include betaSize {
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+        }
+        [dir="rtl"] & {
+            content: '\e765';
+        }
+    }
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
+@include epsilonSize {
+    [type="checkbox"]+label::before {
+        left: -1px;
+    }
+    [type=checkbox]+label::after {
+        margin-left: -19px;
+    }
+}
+
+@include betaSize {
+    [type="checkbox"]+label::before {
+        left: 0;
+    }
+    [type="checkbox"]+label::after {
+        @include font-size(13);
+        margin-left: -18px;
+    }
+}

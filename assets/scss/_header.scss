@@ -1,0 +1,242 @@
+header {
+    // background-color: $cc-black1;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1010;
+    @include css3-prefix('transition', 'all 0.6s ease-out');
+    * {
+        @include css3-prefix('transition', 'all 0.6s ease-out');
+    }
+    .navbar {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        height: 110px;
+        @include etaSize {
+            height: 100px;
+        }
+        @include zetaSize {
+            height: auto;
+            padding: 15px;
+        }
+        &.cc-menu-opened {
+            background: $cc-blue1;
+            background: linear-gradient(180deg, $cc-blue1 0%, $cc-blue3 100%);
+        }
+        .navbar-brand {
+            position: relative;
+            img {
+                width: 210px;
+                @include zetaSize {
+                    width: 140px;
+                }
+                @include epsilonSize {
+                    width: 135px;
+                }
+                @include deltaSize {
+                    width: 130px;
+                }
+                @include gammaSize {
+                    width: 125px;
+                }
+                @include betaSize {
+                    width: 120px;
+                }
+            }
+        }
+        .cc-main-logo {
+            position: relative;
+            z-index: 801;
+        }
+        .cc-main-logo-inverted {
+            position: absolute;
+            top: 3px;
+            left: 0;
+            opacity: 0;
+            z-index: 800;
+        }
+        .navbar-collapse {
+            @include zetaSize {
+                margin-top: 15px;
+            }
+            .navbar-nav {
+                .nav-item {
+                    @include zetaSize {
+                        margin-bottom: 8px;
+                        &:nth-last-of-type(1) {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                .nav-link {
+                    @include font-size(17);
+                    font-weight: $cc-fBlack;
+                    text-transform: uppercase;
+                    padding-left: 0;
+                    padding-right: 0;
+                    margin-left: 18px;
+                    margin-right: 18px;
+                    color: $cc-white;
+                    position: relative;
+                    @include zetaSize {
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
+                }
+                .active>.nav-link,
+                .nav-link.active,
+                .nav-link.show,
+                .show>.nav-link {
+                    &::after {
+                        content: '';
+                        background-color: $cc-yellow;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        height: 2px;
+                        @include zetaSize {
+                            height: 1px;
+                        }
+                    }
+                }
+                .nav-link:hover {
+                    color: $cc-white;
+                    &::after {
+                        content: '';
+                        background-color: $cc-yellow;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        height: 2px;
+                        @include zetaSize {
+                            height: 1px;
+                        }
+                    }
+                }
+            }
+        }
+        .navbar-toggler {
+            border-color: $cc-yellow;
+            width: 42px;
+            height: 36px;
+            top: -3px;
+            position: relative;
+            &:focus {
+                outline: none;
+            }
+            @include zetaSize {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .navbar-toggler-icon {
+                background-image: none;
+                width: 20px;
+                height: 1px;
+                background-color: $cc-white;
+                position: relative;
+                &:before {
+                    content: '';
+                    width: 100%;
+                    height: 1px;
+                    background-color: $cc-white;
+                    position: absolute;
+                    left: 0;
+                    top: -6px;
+                }
+                &:after {
+                    content: '';
+                    width: 100%;
+                    height: 1px;
+                    background-color: $cc-white;
+                    position: absolute;
+                    left: 0;
+                    bottom: -6px;
+                }
+            }
+        }
+    }
+    &.header__white {
+        background-color: transparentize($cc-white, 0.03);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        .navbar-dark .navbar-nav .nav-link {
+            color: $cc-blue1;
+            &:hover,
+            &:focus {
+                color: $cc-blue1;
+            }
+        }
+        .navbar {
+            height: 76px;
+            @include zetaSize {
+                height: 73px;
+            }
+            @include epsilonSize {
+                height: 72px;
+            }
+            @include deltaSize {
+                height: 70px;
+            }
+            @include gammaSize {
+                height: 69px;
+            }
+            @include betaSize {
+                height: 68px;
+            }
+            .navbar-brand {
+                img {
+                    width: 162px;
+                    @include zetaSize {
+                        width: 140px;
+                    }
+                    @include epsilonSize {
+                        width: 135px;
+                    }
+                    @include deltaSize {
+                        width: 130px;
+                    }
+                    @include gammaSize {
+                        width: 125px;
+                    }
+                    @include betaSize {
+                        width: 120px;
+                    }
+                }
+                img.cc-main-logo {
+                    opacity: 0;
+                }
+                img.cc-main-logo-inverted {
+                    opacity: 1;
+                }
+            }
+            &.navbar-dark {
+                .navbar-nav {
+                    .nav-link {
+                        @include font-size(17);
+                        font-weight: $cc-fBlack;
+                    }
+                }
+            }
+            .navbar-toggler {
+                .navbar-toggler-icon {
+                    background-color: $cc-blue1;
+                    &:before {
+                        background-color: $cc-blue1;
+                    }
+                    &:after {
+                        background-color: $cc-blue1;
+                    }
+                }
+            }
+            &.cc-menu-opened {
+                background: $cc-white;
+                background: linear-gradient(180deg, $cc-white 0%, $cc-off-white1 100%);
+                height: auto !important;
+            }
+        }
+    }
+}

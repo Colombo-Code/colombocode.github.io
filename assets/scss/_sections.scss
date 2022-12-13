@@ -1,0 +1,1318 @@
+section {
+    width: 100%;
+    padding: 100px 0;
+    @include zetaSize {
+        padding: 80px 0;
+    }
+    @include epsilonSize {
+        padding: 60px 0;
+    }
+    .cc-section__inner {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+        aside {
+            display: block;
+            width: 100%;
+            &.cc-section__header {
+                display: block;
+                width: 100%;
+                margin-bottom: 70px;
+                text-align: center;
+                @include zetaSize {
+                    margin-bottom: 50px;
+                }
+                @include epsilonSize {
+                    margin-bottom: 20px;
+                }
+                h2.cc-section__title {
+                    @include font-size(50);
+                    font-weight: $cc-fBlack;
+                    color: $cc-blue1;
+                    text-transform: uppercase;
+                    margin: 0 0 38px 0;
+                    padding: 0 0 16px 0;
+                    position: relative;
+                    @include etaSize {
+                        @include font-size(45);
+                    }
+                    @include zetaSize {
+                        @include font-size(40);
+                        margin: 0 0 22px 0;
+                    }
+                    @include epsilonSize {
+                        @include font-size(38);
+                        margin: 0 0 15px 0;
+                        padding: 0 0 15px 0;
+                    }
+                    @include deltaSize {
+                        @include font-size(35);
+                        padding: 0 0 14px 0;
+                    }
+                    @include gammaSize {
+                        @include font-size(30);
+                        padding: 0 0 13px 0;
+                    }
+                    @include betaSize {
+                        @include font-size(25);
+                        padding: 0 0 12px 0;
+                    }
+                    &::after {
+                        content: '';
+                        width: 180px;
+                        height: 3px;
+                        background-color: $cc-yellow;
+                        position: absolute;
+                        left: 50%;
+                        bottom: 0;
+                        transform: translateX(-50%);
+                        @include etaSize {
+                            width: 160px;
+                        }
+                        @include zetaSize {
+                            width: 140px;
+                        }
+                        @include epsilonSize {
+                            width: 120px;
+                        }
+                        @include deltaSize {
+                            width: 100px;
+                        }
+                        @include gammaSize {
+                            width: 80px;
+                        }
+                        @include betaSize {
+                            width: 60px;
+                        }
+                    }
+                }
+                label.cc-section__title--desc {
+                    @include font-size(19);
+                    font-weight: $cc-fRegular;
+                    color: $cc-grey1;
+                    max-width: 830px;
+                    margin: 0 auto;
+                    @include etaSize {
+                        @include font-size(18);
+                    }
+                    @include zetaSize {
+                        @include font-size(17);
+                    }
+                    @include epsilonSize {
+                        @include font-size(16);
+                        margin: 0 0 25px 0;
+                    }
+                    @include deltaSize {
+                        @include font-size(15);
+                        margin: 0 0 20px 0;
+                    }
+                    @include gammaSize {
+                        @include font-size(14);
+                        margin: 0 0 15px 0;
+                    }
+                    @include betaSize {
+                        @include font-size(13);
+                        margin: 0 0 10px 0;
+                    }
+                }
+            }
+            &.cc-section__body {
+                display: block;
+                width: 100%;
+                @include font-size(22);
+                font-weight: $cc-fRegular;
+                color: $cc-grey1;
+                @include etaSize {
+                    @include font-size(21);
+                }
+                @include zetaSize {
+                    @include font-size(20);
+                }
+                @include epsilonSize {
+                    @include font-size(19);
+                }
+                @include deltaSize {
+                    @include font-size(18);
+                }
+                @include gammaSize {
+                    @include font-size(17);
+                }
+                @include betaSize {
+                    @include font-size(16);
+                }
+            }
+        }
+    }
+}
+
+.cc-featured-slider {
+    width: 100%;
+    height: calc(100vh - 60px);
+    min-height: 348px;
+    overflow: hidden;
+    @include etaSize {
+        height: calc(100vh - 80px);
+    }
+    @include zetaSize {
+        height: calc(100vh - 100px);
+    }
+    @include epsilonSize {
+        height: calc(100vh - 120px);
+    }
+    @include deltaSize {
+        height: calc(100vh - 150px);
+    }
+    @include gammaSize {
+        height: calc(100vh - 180px);
+    }
+    @include betaSize {
+        height: calc(100vh - 220px);
+    }
+    .cc-featured-slider__item {
+        width: 100%;
+        height: calc(100vh - 60px);
+        min-height: 348px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        display: flex !important;
+        align-items: center;
+        @include etaSize {
+            height: calc(100vh - 80px);
+        }
+        @include zetaSize {
+            height: calc(100vh - 100px);
+        }
+        @include epsilonSize {
+            height: calc(100vh - 120px);
+        }
+        @include deltaSize {
+            height: calc(100vh - 150px);
+        }
+        @include gammaSize {
+            height: calc(100vh - 180px);
+        }
+        @include betaSize {
+            height: calc(100vh - 220px);
+        }
+        &.slide1 {
+            background-image: url('#{$cc-images}featured-img1.jpg');
+        }
+        &.slide2 {
+            background-image: url('#{$cc-images}featured-img2.jpg');
+        }
+        &.slide3 {
+            background-image: url('#{$cc-images}featured-img3.jpg');
+        }
+        &.slide4 {
+            background-image: url('#{$cc-images}featured-img4.jpg');
+        }
+        .cc-featured-slider__inner {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 15px 0 15px;
+            @include thetaSize {
+                padding-left: 100px;
+                padding-right: 100px;
+            }
+            @include deltaSize {
+                padding-left: 65px;
+                padding-right: 65px;
+            }
+            h2 {
+                @include font-size(60);
+                font-weight: $cc-fLight;
+                color: $cc-white;
+                margin: 0 0;
+                padding: 0 0 5px 0;
+                text-transform: uppercase;
+                line-height: 1;
+                text-shadow: 2px 2px 11px rgba(0, 0, 0, 0.43%);
+                @include etaSize {
+                    @include font-size(55);
+                }
+                @include zetaSize {
+                    @include font-size(50);
+                }
+                @include epsilonSize {
+                    @include font-size(45);
+                }
+                @include deltaSize {
+                    @include font-size(40);
+                }
+                @include gammaSize {
+                    @include font-size(35);
+                }
+                @include betaSize {
+                    @include font-size(30);
+                }
+                br {
+                    @include deltaSize {
+                        display: none;
+                    }
+                }
+                span {
+                    font-weight: $cc-fBlack;
+                    &.highlight {
+                        color: $cc-yellow;
+                    }
+                }
+            }
+            p {
+                @include font-size(22);
+                font-weight: $cc-fRegular;
+                color: $cc-white;
+                margin: 0 0 30px 0;
+                padding: 0 0;
+                letter-spacing: 1px;
+                @include etaSize {
+                    @include font-size(21);
+                }
+                @include zetaSize {
+                    @include font-size(20);
+                }
+                @include epsilonSize {
+                    @include font-size(19);
+                    margin: 0 0 25px 0;
+                }
+                @include deltaSize {
+                    @include font-size(18);
+                    margin: 0 0 20px 0;
+                }
+                @include gammaSize {
+                    @include font-size(17);
+                    margin: 0 0 15px 0;
+                }
+                @include betaSize {
+                    @include font-size(16);
+                    margin: 0 0 10px 0;
+                }
+            }
+            button {
+                margin-top: 20px;
+                @include epsilonSize {
+                    margin-top: 18px;
+                }
+                @include deltaSize {
+                    margin-top: 15px;
+                }
+                @include gammaSize {
+                    margin-top: 12px;
+                }
+                @include betaSize {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+    .slick-dots {
+        bottom: 15px;
+        li {
+            width: 15px;
+            button {
+                width: auto;
+                &:before {
+                    @include font-size(12);
+                    color: $cc-blue1;
+                    opacity: 1;
+                }
+            }
+            &.slick-active {
+                button {
+                    &:before {
+                        color: $cc-blue2;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cc-services {
+    .cc-service {
+        width: 100%;
+        display: flex;
+        margin-bottom: 50px;
+        @include epsilonSize {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+            background-color: transparentize($cc-grey1, 0.98);
+            border: 1px solid transparentize($cc-grey1, 0.96);
+            border-radius: 12px;
+            padding: 15px 30px 15px 30px;
+        }
+        @include gammaSize {
+            margin-bottom: 15px;
+        }
+        &:nth-last-of-type(1) {
+            margin-bottom: 0;
+        }
+        .cc-service__img {
+            width: 50%;
+            height: 0;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            @include epsilonSize {
+                width: 100%;
+                max-width: 420px;
+                margin-bottom: 15px;
+                background-size: contain;
+            }
+        }
+        .cc-service__content {
+            flex: 1;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            padding: 10px 0;
+            @include epsilonSize {
+                align-items: center;
+                text-align: center;
+            }
+            .cc-service__title {
+                @include font-size(32);
+                font-weight: $cc-fBlack;
+                text-transform: uppercase;
+                color: $cc-blue1;
+                line-height: 1.2;
+                margin-bottom: 35px;
+                @include etaSize {
+                    @include font-size(30);
+                    margin-bottom: 30px;
+                }
+                @include zetaSize {
+                    @include font-size(28);
+                    margin-bottom: 25px;
+                }
+                @include epsilonSize {
+                    @include font-size(25);
+                    margin-bottom: 20px;
+                }
+                @include deltaSize {
+                    @include font-size(23);
+                    margin-bottom: 15px;
+                }
+                @include gammaSize {
+                    @include font-size(21);
+                }
+                @include betaSize {
+                    @include font-size(19);
+                }
+            }
+            .cc-service__desc {
+                @include font-size(20);
+                font-weight: $cc-fRegular;
+                color: $cc-grey1;
+                @include etaSize {
+                    @include font-size(19);
+                }
+                @include zetaSize {
+                    @include font-size(18);
+                }
+                @include epsilonSize {
+                    @include font-size(17);
+                }
+                @include deltaSize {
+                    @include font-size(16);
+                }
+                @include gammaSize {
+                    @include font-size(15);
+                }
+                @include betaSize {
+                    @include font-size(14);
+                }
+            }
+        }
+        &.software-solutions {
+            .cc-service__img {
+                padding-top: 38%;
+                background-image: url('#{$cc-images}software-solutions.png');
+                // -webkit-transition: all 2s ease-out;
+                // -moz-transition: all 2s ease-out;
+                // -o-transition: all 2s ease-out;
+                // transition: all 2s ease-out;
+                animation: cc-move-bg 20s infinite;
+                @include epsilonSize {
+                    padding-top: 64%;
+                }
+            }
+            .cc-service__content {
+                padding-left: 100px;
+                padding-right: 0;
+                @include epsilonSize {
+                    padding-left: 0;
+                }
+            }
+        }
+        &.it-support {
+            @include epsilonSize {
+                flex-direction: column-reverse;
+            }
+            .cc-service__img {
+                padding-top: 35%;
+                background-image: url('#{$cc-images}it-support.png');
+                animation: cc-move-bg 20s infinite;
+                @include epsilonSize {
+                    padding-top: 57%;
+                }
+            }
+            .cc-service__content {
+                padding-left: 0;
+                padding-right: 60px;
+                @include epsilonSize {
+                    padding-right: 0;
+                }
+            }
+        }
+        &.cloud-services {
+            .cc-service__img {
+                padding-top: 38%;
+                background-image: url('#{$cc-images}cloud-services.png');
+                animation: cc-move-bg 20s infinite;
+                @include epsilonSize {
+                    padding-top: 63%;
+                }
+            }
+            .cc-service__content {
+                padding-left: 135px;
+                padding-right: 0;
+                @include epsilonSize {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+}
+
+.cc-about {
+    background-color: $cc-off-white1;
+    .cc-section-feature-img {
+        max-width: 900px;
+        width: 100%;
+        height: 0;
+        padding-top: 31%;
+        background-image: url('#{$cc-images}about-us.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        animation: cc-move-bg 20s infinite;
+        margin: 0 auto;
+        @include zetaSize {
+            background-size: contain;
+        }
+    }
+    .cc-about-details {
+        margin-top: 100px;
+        display: flex;
+        align-items: stretch;
+        @include zetaSize {
+            margin-top: 80px;
+        }
+        @include epsilonSize {
+            margin-top: 60px;
+            flex-direction: column;
+        }
+        @include deltaSize {
+            margin-top: 40px;
+        }
+        .cc-about-detail__col {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            padding: 0 15px;
+            @include epsilonSize {
+                margin-bottom: 35px;
+                padding: 0 0;
+                &:nth-last-of-type(1) {
+                    margin-bottom: 0;
+                }
+            }
+            h3 {
+                @include font-size(32);
+                font-weight: $cc-fBlack;
+                color: $cc-black2;
+                margin: 0 0 20px 0;
+                padding: 0 0;
+                min-height: 82px;
+                text-transform: uppercase;
+                line-height: 1.2;
+                @include etaSize {
+                    @include font-size(30);
+                }
+                @include zetaSize {
+                    @include font-size(28);
+                }
+                @include epsilonSize {
+                    @include font-size(25);
+                    margin: 0 0 15px 0;
+                    min-height: 0;
+                }
+                @include deltaSize {
+                    @include font-size(23);
+                }
+                @include gammaSize {
+                    @include font-size(21);
+                }
+                @include betaSize {
+                    @include font-size(19);
+                }
+            }
+            p {
+                @extend .margin-pad-none;
+                @include font-size(20);
+                font-weight: $cc-fRegular;
+                color: $cc-grey1;
+                @include etaSize {
+                    @include font-size(19);
+                }
+                @include zetaSize {
+                    @include font-size(18);
+                }
+                @include epsilonSize {
+                    @include font-size(17);
+                }
+                @include deltaSize {
+                    @include font-size(16);
+                }
+                @include gammaSize {
+                    @include font-size(15);
+                }
+                @include betaSize {
+                    @include font-size(14);
+                }
+            }
+        }
+    }
+}
+
+.cc-featured {
+    width: 100%;
+    padding: 78px;
+    background-image: url('#{$cc-images}featured-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: flex-end;
+    @include etaSize {
+        padding: 60px;
+    }
+    @include zetaSize {
+        padding: 50px;
+    }
+    @include epsilonSize {
+        padding: 40px;
+    }
+    @include deltaSize {
+        padding: 30px;
+    }
+    @include deltaSize {
+        padding: 25px;
+    }
+    @include gammaSize {
+        padding: 20px;
+    }
+    @include betaSize {
+        padding: 15px;
+    }
+    .cc-featured__inner {
+        background-color: transparentize($cc-blue3, 0.8);
+        backdrop-filter: blur(34px);
+        border-radius: 8px;
+        max-width: 920px;
+        width: 100%;
+        padding: 40px 40px;
+        text-align: center;
+        color: $cc-white;
+        @include epsilonSize {
+            padding: 30px;
+        }
+        @include deltaSize {
+            padding: 30px 25px;
+        }
+        @include gammaSize {
+            padding: 25px 20px;
+        }
+        @include betaSize {
+            padding: 20px 15px;
+        }
+        label {
+            @include font-size(18);
+            font-weight: $cc-fRegular;
+            color: $cc-white;
+            @extend .margin-pad-none;
+            @include etaSize {
+                @include font-size(17);
+            }
+            @include zetaSize {
+                @include font-size(16);
+            }
+            @include epsilonSize {
+                @include font-size(15);
+            }
+            @include deltaSize {
+                @include font-size(14);
+            }
+            @include gammaSize {
+                @include font-size(13);
+            }
+            @include betaSize {
+                @include font-size(12);
+            }
+        }
+        h2 {
+            @include font-size(55);
+            font-weight: $cc-fBlack;
+            color: $cc-white;
+            text-transform: uppercase;
+            line-height: 1.2;
+            @extend .margin-pad-none;
+            padding: 0 0;
+            @include etaSize {
+                @include font-size(50);
+            }
+            @include zetaSize {
+                @include font-size(45);
+            }
+            @include epsilonSize {
+                @include font-size(40);
+            }
+            @include deltaSize {
+                @include font-size(35);
+            }
+            @include gammaSize {
+                @include font-size(32);
+            }
+            @include betaSize {
+                @include font-size(30);
+            }
+        }
+        button {
+            margin-top: 20px;
+        }
+    }
+}
+
+.cc-clients {
+    background-color: $cc-blue2;
+    position: relative;
+    margin-bottom: 230px;
+    padding-bottom: 0;
+    &:after {
+        content: '';
+        width: 100%;
+        height: 230px;
+        background-image: url('#{$cc-images}clients-bg-vector.png');
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+        position: absolute;
+        top: 100%;
+        z-index: 1;
+    }
+    &:before {
+        content: '';
+        width: 210px;
+        height: 0;
+        padding-top: 16%;
+        background-image: url('#{$cc-images}trophy.png');
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: contain;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 2;
+        @include etaSize {
+            padding-top: 18%;
+        }
+        @include zetaSize {
+            padding-top: 20%;
+            top: calc( 100% + 10px);
+        }
+        @include epsilonSize {
+            padding-top: 25%;
+            width: 180px;
+            top: calc( 100% + 20px);
+        }
+        @include deltaSize {
+            padding-top: 30%;
+            width: 160px;
+            top: calc( 100% + 30px);
+        }
+        @include gammaSize {
+            padding-top: 40%;
+            width: 140px;
+            top: calc( 100% + 40px);
+        }
+        @include betaSize {
+            padding-top: 50%;
+            width: 120px;
+            top: calc( 100% + 50px);
+        }
+    }
+    .cc-section__inner {
+        aside.cc-section__header {
+            h2.cc-section__title {
+                color: $cc-white;
+            }
+        }
+    }
+}
+
+.cc-clients-slider {
+    width: 100%;
+    min-height: 348px;
+    overflow: hidden;
+    .slick-prev {
+        left: 0 !important;
+    }
+    .slick-next {
+        right: 0 !important;
+    }
+    .cc-clients-slider__item {
+        width: 100%;
+        min-height: 452px;
+        display: flex !important;
+        align-items: center;
+        .cc-clients-slider__inner {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 15px 0 15px;
+            display: flex;
+            align-items: center;
+            @include thetaSize {
+                padding-left: 100px;
+                padding-right: 100px;
+            }
+            @include zetaSize {
+                flex-direction: column-reverse;
+            }
+            @include deltaSize {
+                padding-left: 65px;
+                padding-right: 65px;
+            }
+            .cc-client-text-content {
+                flex: 1;
+                padding-right: 100px;
+                @include zetaSize {
+                    padding-right: 0;
+                    padding-top: 35px;
+                }
+                p {
+                    @include font-size(20);
+                    font-weight: $cc-fRegular;
+                    color: $cc-white;
+                    margin: 0 0 50px 0;
+                    padding: 0 0;
+                    position: relative;
+                    @include etaSize {
+                        @include font-size(19);
+                        margin: 0 0 35px 0;
+                    }
+                    @include zetaSize {
+                        @include font-size(18);
+                        margin: 0 0 30px 0;
+                        text-align: center;
+                    }
+                    @include epsilonSize {
+                        @include font-size(17);
+                        margin: 0 0 20px 0;
+                    }
+                    @include deltaSize {
+                        @include font-size(16);
+                    }
+                    @include gammaSize {
+                        @include font-size(15);
+                    }
+                    @include betaSize {
+                        @include font-size(14);
+                    }
+                    &:before {
+                        content: '';
+                        width: 32px;
+                        height: 32px;
+                        background-image: url('#{$cc-images}solid-quote-left.png');
+                        background-repeat: no-repeat;
+                        background-position: center top;
+                        background-size: contain;
+                        position: absolute;
+                        top: -56px;
+                        left: 0;
+                        @include etaSize {
+                            width: 30px;
+                            height: 30px;
+                            top: -50px;
+                        }
+                        @include zetaSize {
+                            width: 28px;
+                            height: 28px;
+                            top: -45px;
+                        }
+                        @include epsilonSize {
+                            width: 26px;
+                            height: 26px;
+                            top: -40px;
+                        }
+                        @include deltaSize {
+                            width: 24px;
+                            height: 24px;
+                            top: -35px;
+                        }
+                        @include gammaSize {
+                            width: 23px;
+                            height: 23px;
+                            top: -30px;
+                        }
+                    }
+                    &:after {
+                        content: '';
+                        width: 32px;
+                        height: 32px;
+                        background-image: url('#{$cc-images}solid-quote-right.png');
+                        background-repeat: no-repeat;
+                        background-position: center top;
+                        background-size: contain;
+                        position: absolute;
+                        bottom: -56px;
+                        right: 0;
+                        @include etaSize {
+                            width: 30px;
+                            height: 30px;
+                            bottom: -50px;
+                        }
+                        @include zetaSize {
+                            width: 28px;
+                            height: 28px;
+                            bottom: -45px;
+                        }
+                        @include epsilonSize {
+                            width: 26px;
+                            height: 26px;
+                            bottom: -40px;
+                        }
+                        @include deltaSize {
+                            width: 24px;
+                            height: 24px;
+                            bottom: -35px;
+                        }
+                        @include gammaSize {
+                            width: 23px;
+                            height: 23px;
+                            bottom: -30px;
+                        }
+                    }
+                }
+                h6 {
+                    @include font-size(28);
+                    font-weight: $cc-fBlack;
+                    color: $cc-white;
+                    margin: 0 0;
+                    padding: 0 0 0 0;
+                    line-height: 1;
+                    @include etaSize {
+                        @include font-size(27);
+                    }
+                    @include zetaSize {
+                        @include font-size(26);
+                        text-align: center;
+                    }
+                    @include epsilonSize {
+                        @include font-size(25);
+                    }
+                    @include deltaSize {
+                        @include font-size(24);
+                    }
+                    @include gammaSize {
+                        @include font-size(23);
+                    }
+                    @include betaSize {
+                        @include font-size(22);
+                    }
+                }
+                span {
+                    @include font-size(18);
+                    font-weight: $cc-fRegular;
+                    color: $cc-yellow;
+                    @include etaSize {
+                        @include font-size(17);
+                    }
+                    @include zetaSize {
+                        @include font-size(16);
+                        text-align: center;
+                        display: block;
+                    }
+                    @include epsilonSize {
+                        @include font-size(15);
+                    }
+                    @include deltaSize {
+                        @include font-size(14);
+                    }
+                    @include gammaSize {
+                        @include font-size(13);
+                    }
+                    @include betaSize {
+                        @include font-size(12);
+                    }
+                }
+            }
+            .cc-client-img-content {
+                width: 440px;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include etaSize {
+                    width: 40%;
+                }
+                @include zetaSize {
+                    width: 45%;
+                }
+                @include epsilonSize {
+                    width: 50%;
+                }
+                @include deltaSize {
+                    width: 60%;
+                }
+                @include gammaSize {
+                    width: 75%;
+                }
+                @include betaSize {
+                    width: 85%;
+                }
+                .cc-client__project-img {
+                    width: 100%;
+                    border-radius: 100%;
+                    border: 0.5em solid $cc-white;
+                    background-color: $cc-white;
+                    box-shadow: 0 0 15px transparentize($cc-black1, 0.8);
+                }
+                .cc-client__profile-img {
+                    position: absolute;
+                    width: 35%;
+                    border-radius: 100%;
+                    border: 0.4em solid $cc-white;
+                    background-color: $cc-white;
+                    top: 0;
+                    right: 0;
+                    box-shadow: 0 0 10px transparentize($cc-black1, 0.8);
+                }
+            }
+        }
+    }
+}
+
+.cc-contact {
+    position: relative;
+    @include gammaSize {
+        padding-top: 0;
+    }
+    &:before {
+        content: '';
+        width: 496px;
+        height: 554px;
+        background-image: url('#{$cc-images}contact-vector1.png');
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: contain;
+        position: absolute;
+        bottom: 50px;
+        left: 20px;
+        z-index: 1;
+        @include etaSize {
+            width: 476px;
+            height: 532px;
+        }
+        @include zetaSize {
+            width: 456px;
+            height: 509px;
+        }
+        @include epsilonSize {
+            width: 436px;
+            height: 487px;
+        }
+        @include deltaSize {
+            width: 416px;
+            height: 465px;
+            left: auto;
+            right: 0;
+            bottom: 50%;
+            opacity: 0.4;
+        }
+        @include gammaSize {
+            width: 396px;
+            height: 442px;
+        }
+        @include betaSize {
+            width: 376px;
+            height: 420px;
+        }
+    }
+    &:after {
+        content: '';
+        width: 462px;
+        height: 410px;
+        background-image: url('#{$cc-images}contact-vector2.png');
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: contain;
+        position: absolute;
+        bottom: 0;
+        right: 20px;
+        z-index: 1;
+        @include etaSize {
+            width: 442px;
+            height: 392px;
+        }
+        @include zetaSize {
+            width: 422px;
+            height: 375px;
+        }
+        @include epsilonSize {
+            width: 402px;
+            height: 357px;
+        }
+        @include deltaSize {
+            width: 382px;
+            height: 339px;
+            opacity: 0.8;
+        }
+        @include gammaSize {
+            width: 362px;
+            height: 321px;
+        }
+        @include betaSize {
+            width: 342px;
+            height: 304px;
+        }
+    }
+    .cc-section__inner {
+        position: relative;
+        z-index: 2;
+        aside.cc-section__body {
+            padding-top: 30px;
+        }
+    }
+    .cc-contact-wrapper {
+        width: 100%;
+        display: flex;
+        @include epsilonSize {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .cc-contact-wrapper__col {
+            flex: 1;
+            @include epsilonSize {
+                width: 100%;
+                max-width: 520px;
+                &:nth-last-of-type(1) {
+                    margin-top: 50px;
+                }
+            }
+            h3 {
+                @include font-size(32);
+                font-weight: $cc-fBlack;
+                color: $cc-blue1;
+                margin: 80px 0 25px 0;
+                padding: 0 0;
+                text-transform: uppercase;
+                line-height: 1.2;
+                @include etaSize {
+                    @include font-size(30);
+                }
+                @include zetaSize {
+                    @include font-size(28);
+                    margin: 40px 0 25px 0;
+                }
+                @include epsilonSize {
+                    @include font-size(25);
+                    margin: 35px 0 20px 0;
+                }
+                @include deltaSize {
+                    @include font-size(23);
+                    margin: 30px 0 20px 0;
+                }
+                @include gammaSize {
+                    @include font-size(21);
+                }
+                @include betaSize {
+                    @include font-size(19);
+                }
+                &:nth-of-type(1) {
+                    margin-top: 0;
+                }
+            }
+            p {
+                @include font-size(22);
+                font-weight: $cc-fRegular;
+                color: $cc-grey1;
+                margin: 0 0;
+                padding: 0 0 10px 0;
+                &:nth-last-of-type(1) {
+                    padding: 0 0 0 0;
+                }
+                @include etaSize {
+                    @include font-size(21);
+                }
+                @include zetaSize {
+                    @include font-size(20);
+                }
+                @include epsilonSize {
+                    @include font-size(19);
+                }
+                @include deltaSize {
+                    @include font-size(18);
+                }
+                @include gammaSize {
+                    @include font-size(17);
+                }
+                @include betaSize {
+                    @include font-size(16);
+                }
+                a {
+                    color: $cc-grey1;
+                    &:hover,
+                    &:focus {
+                        color: $cc-grey1;
+                        text-decoration-color: $cc-yellow;
+                    }
+                }
+            }
+            .cc-contact-form {
+                .cc-contact-form__row {
+                    display: block;
+                    margin-bottom: 22px;
+                    position: relative;
+                    @include epsilonSize {
+                        margin-bottom: 20px;
+                    }
+                    @include deltaSize {
+                        margin-bottom: 18px;
+                    }
+                    @include gammaSize {
+                        margin-bottom: 16px;
+                    }
+                    @include betaSize {
+                        margin-bottom: 12px;
+                    }
+                    &:nth-last-of-type(1) {
+                        margin-bottom: 0;
+                    }
+                    &:before {
+                        content: '';
+                        width: 16px;
+                        height: 16px;
+                        background-position: center top;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        position: absolute;
+                        left: 23px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        z-index: 1;
+                        @include epsilonSize {
+                            width: 15px;
+                            height: 15px;
+                        }
+                        @include deltaSize {
+                            width: 14px;
+                            height: 14px;
+                        }
+                        @include gammaSize {
+                            width: 13px;
+                            height: 13px;
+                        }
+                        @include betaSize {
+                            width: 12px;
+                            height: 12px;
+                        }
+                    }
+                    &.name {
+                        &:before {
+                            background-image: url('#{$cc-images}info.png');
+                        }
+                    }
+                    &.email {
+                        &:before {
+                            background-image: url('#{$cc-images}envelope.png');
+                            @include epsilonSize {
+                                margin-top: 1px;
+                            }
+                            @include deltaSize {
+                                margin-top: 2px;
+                            }
+                        }
+                    }
+                    &.phone {
+                        &:before {
+                            background-image: url('#{$cc-images}phone-square-alt.png');
+                        }
+                    }
+                    &.message {
+                        &:before {
+                            top: 19px;
+                            transform: translateY(0);
+                            background-image: url('#{$cc-images}comment-alt.png');
+                            @include epsilonSize {
+                                top: 18px;
+                            }
+                            @include deltaSize {
+                                top: 17px;
+                            }
+                            @include gammaSize {
+                                top: 16px;
+                            }
+                            @include betaSize {
+                                top: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes cc-move-bg {
+    0% {
+        transform: translateY(0);
+    }
+    10% {
+        transform: translateY(-5px);
+    }
+    20% {
+        transform: translateY(-10px);
+    }
+    30% {
+        transform: translateY(-15px);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    60% {
+        transform: translateY(0px);
+    }
+    70% {
+        transform: translateY(5px);
+    }
+    80% {
+        transform: translateY(10px);
+    }
+    90% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

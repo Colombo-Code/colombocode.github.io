@@ -1,0 +1,19 @@
+footer {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    height: 26px;
+    background-color: $cc-blue1;
+    text-align: center;
+    color: $cc-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+        @include font-size(9);
+        font-weight: $cc-fRegular;
+        letter-spacing: 1px;
+    }
+}
